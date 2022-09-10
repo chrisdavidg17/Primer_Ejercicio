@@ -11,22 +11,24 @@ public class Coche {
     }
     public static void main(String[] args) {
         int puertas;
+        sumapuerta();
     }
 
-    public static void sumapuertas (int a){
+    public static void sumapuertas (int b){
        int puertas;
-               puertas = ++a;
+               puertas = ++b;
        System.out.println(puertas);
     }
 
-    public static void sumapuerta (int a){
+    public static void sumapuerta (){
         System.out.print("Añadir puerta? Y/N");
-        Scanner reader = new Scanner(System.in);
-        a = reader.nextInt();
-        if (a=='Y'){
+        Scanner teclado = new Scanner(System.in);
+        String a;
+        a =  teclado.nextLine();
+        if (a == "Y"){
           sumapuertas(1);
         }
-        else if(a=='N'){
+        else if(a == "N"){
             System.out.println("OK");
         }
     }
